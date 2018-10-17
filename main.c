@@ -54,7 +54,10 @@ int main(int argc, char **argv)
 	for(i = 0; i < 20; i++)
 	{
 		rc = pthread_join(threads[i], NULL);
-		if(rc){printf("** could not join thread %d\n", i); exit(-1);
-		plock_destroy(priority_lock); return 0;
+		if(rc)
+		{
+			printf("** could not join thread %d\n", i); exit(-1);
+			plock_destroy(priority_lock); return 0;
+		}
 	}
 }
