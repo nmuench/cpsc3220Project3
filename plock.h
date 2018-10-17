@@ -6,11 +6,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <unist.h>
+#include <unistd.h>
 #include <pthread.h>
 
 #define FREE 0
-#define BUSY 0
+#define BUSY 1
 
 typedef struct node_def{
 	int priority;	/*priority of the waiting thread*/
