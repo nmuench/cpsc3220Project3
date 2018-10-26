@@ -45,9 +45,12 @@ int main(int argc, char **argv)
 		{
 			printf("** could not create thread %d\n",i); exit(-1);
 		}
+		printf("THREAD %d CREATED\n", i);
 		if((i&3)==0)
 		{
-			sleep(1);
+			printf("SLEEP\n");
+			sleep(3);
+			//printf("WAKE\n");
 		}
 	}
 
