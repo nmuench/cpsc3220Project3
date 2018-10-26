@@ -19,7 +19,7 @@ void *worker(void *args)
 	int priority = *(((int *) args) + 1);
 	plock_enter(priority_lock, priority);
 	printf("thread %d starts with priority %d\n", thread_id, priority);
-	sleep(2);
+	sleep(1);
 	printf("thread %d ends\n", thread_id);
 	plock_exit(priority_lock);
 	pthread_exit(NULL);
@@ -45,11 +45,11 @@ int main(int argc, char **argv)
 		{
 			printf("** could not create thread %d\n",i); exit(-1);
 		}
-		printf("THREAD %d CREATED\n", i);
+		//printf("THREAD %d CREATED\n", i);
 		if((i&3)==0)
 		{
-			printf("SLEEP\n");
-			sleep(3);
+			//printf("SLEEP\n");
+			sleep(4);
 			//printf("WAKE\n");
 		}
 	}
