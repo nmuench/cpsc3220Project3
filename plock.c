@@ -1,5 +1,13 @@
 #include "plock.h"
-
+/* Nick Muenchen
+   CPSC 3220
+	 Project 3
+	 1 November 2018
+*	 priority lock (plock) implementation
+*
+* compile with: gcc -Wall plock.c main.c -pthread
+* run helgrind tests with: valgrind --tool=helgrind ./a.out
+*/
 
 
 
